@@ -101,22 +101,7 @@ nav .menu {
 nav ul {
     display: flex;
 }
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-    nav .menu:hover + ul{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        padding: 15px;
-        left: 0;
-        background-color: rgb(0, 0, 0 , 0.5);
-    }
 
-}
 nav ul li a {
     display: block;
     text-decoration: none;
@@ -128,6 +113,24 @@ nav ul li a {
     z-index: 2; 
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    nav ul li a {
+        padding : 15px   ;
+    }
+    nav .menu:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 15px;
+        left: 0;
+        background-color: rgb(0, 0, 0 , 0.5);
+    }
+}
 ul li a:hover , nav li a.active{
     color: var(--main-color);
     border-bottom: 1px solid var(--main-color);
